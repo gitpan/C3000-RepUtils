@@ -16,7 +16,7 @@ our @ISA       = qw( Exporter );
 our @EXPORT    = qw( init read_conf make_rep_name  );
 
 
-our $VERSION = 0.1;
+our $VERSION = 0.11;
 
 
 # ABSTRACT: turns baubles into trinkets
@@ -66,6 +66,7 @@ sub read_conf{
 my $path = dirname($0);
 my $file_name = basename($0);
    $file_name =~ s/\..+$/\.ini/;
+   $file_name = 'RepAuto.ini' if $file_name !~ /\.ini$/;
    $path = Win32::GetFullPathName($path);
 my $abs_ini = catfile($path, $file_name);
 my $Config = Config::Tiny->read($abs_ini) or die "can't open config file! $!";

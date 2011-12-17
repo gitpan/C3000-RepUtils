@@ -20,7 +20,7 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'C3000::RepUtils',
   'PREREQ_PM' => {},
-  'VERSION' => '0.1',
+  'VERSION' => '0.11',
   'test' => {
     'TESTS' => 't/*.t'
   }
